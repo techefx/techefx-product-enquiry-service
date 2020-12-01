@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: techefx-product-enquiry-service
+
+server:
+  port: ${port:8700}
+
+
+
+#techefx-product-stock-service:
+#  ribbon:
+#    listOfServers: http://localhost:8800, http://localhost:8801

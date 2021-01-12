@@ -1,10 +1,28 @@
 spring:
   application:
     name: techefx-product-enquiry-service
+  sleuth:
+      enabled: true
+  zipkin:
+      enabled: true
+      base-url: ${ZIPKIN_SERVER:http://localhost:9411/}
 
 server:
   port: ${port:8700}
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
 
 
 #techefx-product-stock-service:
